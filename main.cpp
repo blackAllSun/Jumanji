@@ -20,47 +20,47 @@ void dispatchPionDsTableau(Pion pion,char val,vector<Pion> pions){
   switch(val){
     case '0':
       cout<<"avance de 3 cases"<<endl;
-      pion.avance(val);
+      pion.avance(3);
       break;
     case '1':
       cout<<"avance de 1 cases"<<endl;
-      pion.avance(val);
+      pion.avance(1);
       break;
     case '2':
       cout<<"recule de 1 cases"<<endl;
-      pion.recule(val);
+      pion.recule(1);
       break;
     case '3':
       cout<<"recule de 2 cases"<<endl;
-      pion.recule(val);
+      pion.recule(2);
       break;
     case '4':
       cout<<"passe par la case prison pendant 2 tours"<<endl;
-      pion.prison(val);
+      pion.prison(0);
       break;
     case '5':
       cout<<"passe par la case prison pendant 5 tours"<<endl;
-      pion.prison(val);
+      pion.prison(0);
       break;
     case '6':
       cout<<"fais avancer ts les autres de 2 tours"<<endl;
       for (Pion p : pions)
-        pion.avanceAutre(val,p);
+        pion.avanceAutre(2,p);
       break;
     case '7':
       cout<<"fais reculer ts les autres de 2 tours"<<endl;
       for (Pion p : pions)
-        pion.reculeAutre(val,p);
+        pion.reculeAutre(2,p);
       break;
     case '8':
       cout<<"fais avancer ts les autres de 5 tours"<<endl;
       for (Pion p : pions)
-        pion.avanceAutre(val,p);
+        pion.avanceAutre(5,p);
       break;
     case '9':
       cout<<"fais reculer ts les autres de 5 tours"<<endl;
       for (Pion p : pions)
-        pion.reculeAutre(val,p);
+        pion.reculeAutre(5,p);
       break;
    }
    cout<<"Pion : "<<pion.getName()<<" i : "<<pion.getPosit()<<" xp : "<<pion.getScore()<<endl;
